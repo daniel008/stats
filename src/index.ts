@@ -1,4 +1,5 @@
 import { CsvFileReader } from './CsvFileReader.js';
+import { MatchResult } from './MatchResult.js';
 
 const reader = new CsvFileReader('football.csv');
 reader.read();
@@ -9,12 +10,6 @@ reader.read();
 //   AwayWin = 'A',
 //   Draw = 'D',
 // }
-
-const MatchResult = {
-  HomeWin: 'H',
-  AwayWin: 'A',
-  Draw: 'D',
-} as const;
 
 let manUnitedWins = 0;
 for (let match of reader.data) {
