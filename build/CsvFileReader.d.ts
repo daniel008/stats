@@ -1,10 +1,8 @@
-import { MatchResult } from './MatchResult.js';
-type MatchData = [Date, string, string, number, number, MatchResult, string];
-export declare class CsvFileReader {
+export declare abstract class CsvFileReader<T> {
     fileName: string;
-    data: MatchData[];
+    data: T[];
     constructor(fileName: string);
+    abstract mapRow(row: string[]): T;
     read(): void;
 }
-export {};
 //# sourceMappingURL=CsvFileReader.d.ts.map
