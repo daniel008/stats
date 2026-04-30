@@ -13,8 +13,6 @@ export class CsvFileReader {
             .split('\n')
             .map((row) => {
             return row.split(',');
-        })
-            .map(this.mapRow);
+        });
     }
 }
-//# sourceMappingURL=CsvFileReader.js.map

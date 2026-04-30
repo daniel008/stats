@@ -10,13 +10,21 @@
     "module": "nodenext",
     "target": "esnext",
     "types": ["node"],
+    /* 严格性（强烈建议） */
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmitOnError": true,
+    /* ESM 兼容 */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    /* DX 提升 */
+    "skipLibCheck": true,
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
     // and npm install -D @types/node
 
     // Other Outputs
-    "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
 
@@ -33,12 +41,11 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
-    "strict": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true
-  }
+    "moduleDetection": "force"
+  },
+  "include": ["src/**/*"]
 }

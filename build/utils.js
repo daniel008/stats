@@ -12,4 +12,3 @@ export const dateStringToDate = (dateString) => {
     const [day, month, year] = dateParts;
     return new Date(year, month - 1, day);
 };
-//# sourceMappingURL=utils.js.map

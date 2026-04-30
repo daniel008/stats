@@ -1,9 +1,14 @@
-import { CsvFileReader } from './CsvFileReader.js';
 import { MatchResult } from './MatchResult.js';
-type MatchRow = [string, string, string, string, string, string, string];
+interface DataReader {
+    read(): void;
+    data: string[][];
+}
 type MatchData = [Date, string, string, number, number, MatchResult, string];
-export declare class MatchReader extends CsvFileReader<MatchData> {
-    mapRow(row: MatchRow): MatchData;
+export declare class MatchReader {
+    reader: DataReader;
+    matches: MatchData[];
+    constructor(reader: DataReader);
+    load(): void;
 }
 export {};
 //# sourceMappingURL=MatchReader.d.ts.map

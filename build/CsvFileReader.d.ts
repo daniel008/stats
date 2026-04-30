@@ -1,8 +1,7 @@
-export declare abstract class CsvFileReader<T> {
+export declare class CsvFileReader {
     fileName: string;
-    data: T[];
+    data: string[][];
     constructor(fileName: string);
-    abstract mapRow(row: string[]): T;
     read(): void;
 }
 //# sourceMappingURL=CsvFileReader.d.ts.map

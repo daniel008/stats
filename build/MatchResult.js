@@ -4,4 +4,3 @@ export var MatchResult;
     MatchResult["AwayWin"] = "A";
     MatchResult["Draw"] = "D";
 })(MatchResult || (MatchResult = {}));
-//# sourceMappingURL=MatchResult.js.map
