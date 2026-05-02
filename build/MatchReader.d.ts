@@ -1,9 +1,8 @@
-import { MatchResult } from './MatchResult.js';
+import type { MatchData } from './MatchData.js';
 interface DataReader {
     read(): void;
     data: string[][];
 }
-type MatchData = [Date, string, string, number, number, MatchResult, string];
 export declare class MatchReader {
     reader: DataReader;
     matches: MatchData[];

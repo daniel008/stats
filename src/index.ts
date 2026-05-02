@@ -1,6 +1,8 @@
 import { CsvFileReader } from './CsvFileReader.js';
-import { MatchResult } from './MatchResult.js';
 import { MatchReader } from './MatchReader.js';
+import { ConsoleReport } from './reportTargets/ConsoleReport.js';
+import { WinAnalysis } from './analyzers/WinAnalysis.js';
+import { Report } from './Report.js';
 
 // const reader = new MatchReader('football.csv');
 // reader.read();
@@ -27,13 +29,6 @@ matchReader.load();
 //   }
 // }
 
-let manUnitedWins = 0;
-for (let match of matchReader.matches) {
-  if (match[1] === 'Man United' && match[5] === MatchResult.HomeWin) {
-    manUnitedWins++;
-  } else if (match[2] === 'Man United' && match[5] === MatchResult.AwayWin) {
-    manUnitedWins++;
-  }
-}
+const report = new Report(new WinAnalysis('Liverpool'), new ConsoleReport());
 
-console.log(`Man United won ${manUnitedWins} games`);
+report.PrintReport(matchReader.matches);

@@ -1,8 +1,6 @@
 import { dateStringToDate } from './utils.js';
 import { MatchResult } from './MatchResult.js';
-const isMatchRow = (row) => {
-    return row.length === 7;
-};
+import { isMatchRow } from './MatchData.js';
 export class MatchReader {
     reader;
     matches = [];

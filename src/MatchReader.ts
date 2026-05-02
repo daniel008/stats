@@ -1,17 +1,12 @@
 import { dateStringToDate } from './utils.js';
 import { MatchResult } from './MatchResult.js';
+import type { MatchData } from './MatchData.js';
+import { isMatchRow } from './MatchData.js';
 
 interface DataReader {
   read(): void;
   data: string[][];
 }
-
-type MatchData = [Date, string, string, number, number, MatchResult, string];
-type MatchRow = [string, string, string, string, string, string, string];
-
-const isMatchRow = (row: string[]): row is MatchRow => {
-  return row.length === 7;
-};
 
 export class MatchReader {
   matches: MatchData[] = [];
