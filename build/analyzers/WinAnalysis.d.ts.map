@@ -1,0 +1,1 @@
+{"version":3,"file":"WinAnalysis.d.ts","sourceRoot":"","sources":["../../src/analyzers/WinAnalysis.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,iBAAiB,CAAC;AACjD,OAAO,KAAK,EAAE,QAAQ,EAAE,MAAM,cAAc,CAAC;AAG7C,qBAAa,WAAY,YAAW,QAAQ;IACvB,IAAI,EAAE,MAAM;gBAAZ,IAAI,EAAE,MAAM;IAE/B,GAAG,CAAC,OAAO,EAAE,SAAS,EAAE,GAAG,MAAM;CAYlC"}
